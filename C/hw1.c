@@ -40,8 +40,8 @@ int main()
 
   // Moving average charts
   aprint(datamav, len);
-  charth(datamav, len);
   chartv(datamav, len);
+  charth(datamav, len);
 
   return 0;
 }
@@ -186,5 +186,5 @@ int mavg(int data[], int target[], int len, int r)
     target[i - r] = round((double)sum / (double)(r * 2 + 1));
   }
 
-  return len - r * 2 - 1;
+  return len - r * 2;
 }
